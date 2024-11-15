@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle de Publicación | ArtZone</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="col-md-2 sidebar d-flex flex-column">
+                <a href="home.html" class="navbar-brand text-center mb-4">ArtZone</a>
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a href="home.html" class="nav-link active"><i class="fas fa-home"></i> Inicio</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"><i class="fas fa-search"></i> Explorar</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"><i class="fas fa-bell"></i> Notificaciones</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"><i class="fas fa-envelope"></i> Mensajes</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"><i class="fas fa-bookmark"></i> Guardados</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"><i class="fas fa-user"></i> Perfil</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"><i class="fas fa-store"></i> Galería</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"><i class="fas fa-gavel"></i> Subastas</a></li>
+                </ul>
+
+                <div class="profile-section mb-4 d-flex align-items-center position-relative">
+                    <img src="img/th.jpeg" class="rounded-circle me-2" alt="Imagen de perfil" style="width: 50px; height: 50px;" id="profileImage">
+                    <div>
+                        <h6 class="mb-0" id="profileName">ZeuSmaxis <i class="fas fa-lock"></i></h6>
+                        <small class="text-muted" id="profileUsername">@XdalexJuan</small>
+                    </div>
+                    <div class="ms-auto dropdown">
+                        <button class="btn btn-link text-white p-0" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-ellipsis-h"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end text-white" aria-labelledby="dropdownMenuButton">
+                            <li><a class="dropdown-item text-white" href="#" data-bs-toggle="modal" data-bs-target="#addAccountModal">Agregar una cuenta existente</a></li>
+                            <li><a class="dropdown-item text-white" href="#" onclick="mostrarCuentas()">Ver cuentas abiertas</a></li>
+                            <li><a class="dropdown-item text-white" href="homesinsesion.html" onclick="cerrarSesion()">Cerrar la sesión de @XdalexJuan</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Main Content -->
+            <main class="col-md-10">
+                <div class="container mt-4">
+                    <!-- Información del autor de la publicación -->
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="img/th.jpeg" alt="Imagen de perfil del autor" class="rounded-circle me-2" style="width: 50px; height: 50px;">
+                        <div>
+                            <h6 class="mb-0">Autor de la Publicación</h6>
+                            <small class="text-muted">@autorusername</small>
+                        </div>
+                    </div>
+
+                    <!-- Título y descripción de la publicación -->
+                    <h3>Pelea de Robótica</h3>
+                    <p class="text-muted">Esta es una emocionante competencia de robótica en la que equipos compiten para construir el mejor robot.</p>
+
+                    <!-- Imagen de la publicación -->
+                    <img src="img/th1.jpeg" alt="Imagen de publicación" class="img-fluid mb-3 post-image" onclick="showImageInModal(this)">
+
+                    <!-- Botones de interacción -->
+                    <div class="d-flex justify-content-between mt-3">
+                        <a href="#" class="btn btn-dark text-light me-2" onclick="updateCount('like')">
+                            <i class="fas fa-heart"></i> Me gusta <span class="like-count">200</span>
+                        </a>
+                        <a href="#" class="btn btn-dark text-light me-2" onclick="updateCount('share')">
+                            <i class="fas fa-retweet"></i> Compartir <span class="share-count">150</span>
+                        </a>
+                        <a href="#" class="btn btn-dark text-light me-2" onclick="updateCount('save')">
+                            <i class="fas fa-bookmark"></i> Guardar <span class="save-count">75</span>
+                        </a>
+                        <button class="btn btn-dark text-light" onclick="updateCount('comment')">
+                            <i class="fas fa-comment"></i> Comentar <span class="comment-count">100</span>
+                        </button>
+                    </div>
+
+                    <!-- Sección de comentarios -->
+                    <div class="comments-section mt-4">
+                        <h5>Comentarios</h5>
+                        <div class="comments-list mb-3">
+                            <div class="comment">
+                                <div class="comment-header d-flex align-items-center">
+                                    <img src="img/th.jpeg" alt="Imagen de perfil" class="user-icon me-2">
+                                    <div class="user-details">
+                                        <h6 class="user-name mb-0">Usuario123</h6>
+                                        <span class="comment-time">Hace 2 horas</span>
+                                    </div>
+                                </div>
+                                <p class="comment-body">¡Genial trabajo en la robótica!</p>
+                            </div>
+                        </div>
+                        <form class="comment-form d-flex" onsubmit="addComment(event)">
+                            <input type="text" class="form-control me-2" placeholder="Escribe un comentario..." id="commentInput">
+                            <button type="submit" class="btn btn-primary">Enviar</button>
+                        </form>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Modal for Image -->
+    <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <img id="modalImage" class="img-fluid" alt="Imagen de la publicación">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer mt-4">
+        <div class="container text-center">
+            <div class="footer-divider"></div>
+            <p>&copy; 2024 ArtZone. Todos los derechos reservados.</p>
+            <a href="#">Términos de servicio</a> | <a href="#">Política de privacidad</a>
+        </div>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Función para actualizar los contadores de interacciones
+        function updateCount(type) {
+            const countElement = document.querySelector(`.${type}-count`);
+            countElement.textContent = parseInt(countElement.textContent) + 1;
+        }
+
+        // Función para agregar un comentario
+        function addComment(event) {
+            event.preventDefault();
+            const commentInput = document.getElementById("commentInput");
+            if (commentInput.value) {
+                const commentList = document.querySelector('.comments-list');
+                const newComment = document.createElement('div');
+                newComment.classList.add('comment');
+                newComment.innerHTML = `
+                    <div class="comment-header d-flex align-items-center">
+                        <img src="img/th.jpeg" alt="Imagen de perfil" class="user-icon me-2">
+                        <div class="user-details">
+                            <h6 class="user-name mb-0">Nuevo Usuario</h6>
+                            <span class="comment-time">Hace pocos segundos</span>
+                        </div>
+                    </div>
+                    <p class="comment-body">${commentInput.value}</p>
+                `;
+                commentList.appendChild(newComment);
+                commentInput.value = ''; // Limpiar el campo
+            }
+        }
+
+        // Función para mostrar la imagen en un modal
+        function showImageInModal(img) {
+            const modalImage = document.getElementById('modalImage');
+            modalImage.src = img.src;
+            const imageModal = new bootstrap.Modal(document.getElementById('imageModal'));
+            imageModal.show();
+        }
+
+        // Función para mostrar la cuenta actual
+        function mostrarCuentas() {
+            const username = sessionStorage.getItem('username');
+            alert("Cuenta actual: " + (username ? username : "Sin iniciar sesión"));
+        }
+
+        // Función para cerrar sesión
+        function cerrarSesion() {
+            sessionStorage.removeItem('username');
+            alert("Sesión cerrada");
+        }
+    </script>
+</body>
+</html>

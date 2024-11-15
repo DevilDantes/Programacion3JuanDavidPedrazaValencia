@@ -1,0 +1,168 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #15202b;
+    color: #ffffff;
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: #192734;
+    min-height: 100vh;
+    padding-top: 20px;
+}
+.sidebar .nav-link {
+    color: #ffffff;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+.sidebar .nav-link.active,
+.sidebar .nav-link:hover {
+    color: #1da1f2;
+}
+
+/* Profile Section */
+.profile-section {
+    background-color: #10171e;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+}
+.profile-section h6 {
+    font-size: 1rem;
+    color: #ffffff;
+}
+.profile-section .text-muted {
+    font-size: 0.85rem;
+    color: #8899a6;
+}
+.profile-section .btn-link {
+    color: #8899a6;
+    transition: color 0.3s;
+}
+.profile-section .btn-link:hover {
+    color: #ffffff;
+}
+
+/* Content and Cards */
+.content, .trends {
+    background-color: #15202b;
+    padding: 20px;
+}
+.post-card, .trend-card, .recommendation-card, .comment {
+    background-color: #192734;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    color: #ffffff;
+}
+
+/* Post Image */
+.post-image {
+    display: block;
+    width: 100%; 
+    height: auto; 
+    object-fit: contain; 
+}
+
+/* Comment Section */
+.comment {
+    border: 1px solid #333;
+}
+.comment-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.user-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+    object-fit: cover;
+    border: 2px solid #1da1f2;
+}
+.user-details .user-name {
+    font-weight: bold;
+    font-size: 16px;
+    color: #ffffff;
+}
+.comment-time {
+    font-size: 12px;
+    color: #8899a6;
+    margin-top: 3px;
+}
+.comment-body {
+    font-size: 14px;
+    color: #e1e8ed;
+    margin-top: 8px;
+    line-height: 1.6;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: #1da1f2;
+    border: none;
+}
+.btn-dark {
+    border-radius: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+.btn-dark:hover {
+    background-color: #343a40;
+    color: #f8f9fa;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    background-color: #1c1c1c;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+.dropdown-item {
+    color: #ffffff;
+    padding: 10px 20px;
+    transition: background-color 0.3s;
+}
+.dropdown-item:hover {
+    background-color: #333333;
+}
+
+/* Footer */
+.footer {
+    background-color: #10171e;
+    color: #8899a6;
+    padding: 20px 0;
+}
+.footer-divider {
+    border-top: 1px solid #333;
+    margin-bottom: 15px;
+}
+.footer a {
+    color: #8899a6;
+    transition: color 0.3s;
+}
+.footer a:hover {
+    color: #ffffff;
+}
+
+/* Links */
+.post-card a,
+.footer a {
+    color: #ffffff;
+    transition: color 0.3s;
+}
+.post-card a:hover {
+    color: #1da1f2;
+}
+
+/* Modal */
+.modal-content {
+    background-color: #192734;
+    color: white;
+}

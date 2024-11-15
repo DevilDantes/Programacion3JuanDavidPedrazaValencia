@@ -1,0 +1,303 @@
+/* General */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #15202b; /* Fondo general */
+    color: #e1e8ed; /* Texto principal */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+.header {
+    background-color: #192734; /* Fondo del encabezado */
+    color: #e1e8ed; /* Texto del encabezado */
+    padding: 10px 0;
+}
+
+.header h1 {
+    margin: 0;
+    text-align: center;
+    font-size: 1.8em;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 10px 0 0;
+}
+
+.nav-links li {
+    margin: 0 10px;
+}
+
+.nav-links a {
+    color: #e1e8ed; /* Texto de los enlaces */
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    background-color: #1c1c1c; /* Fondo del enlace activo o en hover */
+}
+
+/* Profile Header */
+.profile-header {
+    display: flex;
+    align-items: center;
+    background-color: #10171e; /* Fondo de la cabecera del perfil */
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.profile-picture {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 20px;
+    border: 2px solid #1da1f2; /* Borde azul */
+}
+
+.profile-info h2 {
+    margin: 0 0 5px;
+    color: #ffffff; /* Texto principal del perfil */
+}
+
+.profile-info p {
+    margin: 0 0 10px;
+    color: #8899a6; /* Texto secundario */
+}
+
+.btn-primary,
+.btn-secondary {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background-color: #1da1f2; /* Botón principal azul */
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #0d8de3; /* Botón en hover */
+}
+
+.btn-secondary {
+    background-color: #38444d; /* Botón secundario gris oscuro */
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #45535e; /* Hover del botón secundario */
+}
+
+/* Profile Nav */
+.profile-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.profile-nav a {
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #e1e8ed; /* Texto del menú */
+    margin: 0 10px;
+    border: 1px solid #1c1c1c; /* Borde del menú */
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.profile-nav a:hover,
+.profile-nav a.active {
+    background-color: #1da1f2; /* Fondo del menú activo */
+    color: #ffffff; /* Texto del menú activo */
+}
+
+/* Sections */
+.profile-section {
+    background-color: #192734; /* Fondo de las secciones */
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Grid */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.post-card {
+    background-color: #243447; /* Fondo de las tarjetas */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.post-card img {
+    width: 100%;
+    height: auto;
+}
+
+.post-card p {
+    padding: 10px;
+    color: #e1e8ed; /* Texto de las tarjetas */
+}
+
+/* Following List */
+.following-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.following-list li {
+    display: flex;
+    align-items: center;
+    margin: 10px 20px;
+}
+
+.following-list img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 2px solid #1da1f2; /* Borde azul de los seguidores */
+}
+
+.following-list p {
+    color: #ffffff; /* Texto de los seguidores */
+}
+/* Estilo inicial del chulito */
+.follow-status i {
+    font-size: 20px;
+    color: green; /* El color cuando está activo (seguido) */
+    cursor: pointer;
+}
+
+/* Estilo cuando el chulito ha sido activado (seguido) */
+.follow-status.followed i {
+    color: darkgray; /* Color oscuro cuando se deja de seguir */
+}
+/* Estilos generales */
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.profile-header img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.profile-info h2 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.profile-info p {
+    color: #555;
+}
+
+.profile-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.profile-nav a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.profile-section {
+    margin-top: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.post-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.following-list, .followers-list {
+    list-style: none;
+    padding: 0;
+}
+
+.following-list li, .followers-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.following-list img, .followers-list img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+.footer {
+    background-color: #10171e; /* Fondo más oscuro para contrastar */
+    color: #8899a6;
+    padding: 20px 0;
+}
+
+.footer-divider {
+    border-top: 1px solid #333;
+    margin-bottom: 15px;
+}
+
+.footer a {
+    color: #8899a6;
+    transition: color 0.3s;
+}
+
+.footer a:hover {
+    color: #ffffff;
+}
+
+
