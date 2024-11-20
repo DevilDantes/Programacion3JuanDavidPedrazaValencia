@@ -19,10 +19,10 @@
                 <a href="home.html" class="navbar-brand text-center mb-4 text-white">ArtZone</a>
                 <ul class="nav flex-column">
                     <li class="nav-item"><a href="home.html" class="nav-link active"><i class="fas fa-home"></i> Inicio</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link"><i class="fas fa-search"></i> Explorar</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link"><i class="fas fa-bell"></i> Notificaciones</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link"><i class="fas fa-envelope"></i> Mensajes</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link"><i class="fas fa-bookmark"></i> Galería</a></li>
+                    <li class="nav-item"><a href="explorar.html" class="nav-link"><i class="fas fa-search"></i> Explorar</a></li>
+                    <li class="nav-item"><a href="notificaciones.html" class="nav-link"><i class="fas fa-bell"></i> Notificaciones</a></li>
+                    <li class="nav-item"><a href="mensajes.html" class="nav-link"><i class="fas fa-envelope"></i> Mensajes</a></li>
+                    <li class="nav-item"><a href="galeria.html" class="nav-link"><i class="fas fa-bookmark"></i> Galería</a></li>
                     <li class="nav-item"><a href="perfil.html" class="nav-link"><i class="fas fa-user"></i> Perfil</a></li>
                 </ul>
 
@@ -63,7 +63,7 @@
                         <img src="img/th.jpeg" class="rounded-circle me-2" alt="Imagen de perfil" style="width: 40px; height: 40px;">
                         <h6><a href="detalle-publicacion.html" class="text-white text-decoration-none">ZeuSmaxis</a></h6>
                     </div>
-                    <p><a href="detalle-publicacion.html" class="text-white text-decoration-none">Pelea de Robotica</a></p>
+                    <p><a href="detalle-publicacion.html" class="text-white text-decoration-none">Pelea de Robótica</a></p>
                     <img src="img/th1.jpeg" alt="Imagen de publicación" class="img-fluid mb-3" onclick="showImageInModal(this)">
                     <div class="d-flex justify-content-between mt-3">
                         <a href="#" class="btn btn-dark text-light me-2">
@@ -78,6 +78,7 @@
                         <button class="btn btn-dark text-light me-2" onclick="toggleComments(this)">
                             <i class="fas fa-comment"></i> Comentar <span class="comment-count">100</span>
                         </button>
+                    </div>
                 </div>
                 <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered modal-lg">
@@ -98,7 +99,117 @@
                             </div>
                         </div>
                     </div>
-                </div>                
+                </div> 
+                <div class="post-card mb-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="img/1.jpeg" class="rounded-circle me-2" alt="Imagen de perfil" style="width: 40px; height: 40px;">
+                        <h6><a href="detalle-publicacion2.html" class="text-white text-decoration-none">ArtFanatic</a></h6>
+                    </div>
+                    <p><a href="detalle-publicacion.html" class="text-white text-decoration-none">Noche de pintura en la playa 🌊🎨</a></p>
+                    <img src="img/6.jpeg" alt="Pintura de playa" class="img-fluid mb-3" onclick="showImageInModal(this)">
+                    <div class="d-flex justify-content-between mt-3">
+                        <a href="#" class="btn btn-dark text-light me-2">
+                            <i class="fas fa-heart"></i> Me gusta <span class="like-count">320</span>
+                        </a>
+                        <a href="#" class="btn btn-dark text-light me-2">
+                            <i class="fas fa-retweet"></i> Compartir <span class="share-count">90</span>
+                        </a>
+                        <a href="#" class="btn btn-dark text-light me-2" onclick="mostrarConfirmacionGuardado()">
+                            <i class="fas fa-bookmark"></i> Guardar <span class="save-count">50</span>
+                        </a>
+                        <button class="btn btn-dark text-light me-2" onclick="toggleComments(this)">
+                            <i class="fas fa-comment"></i> Comentar <span class="comment-count">45</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="post-card mb-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="img/2.jpeg" class="rounded-circle me-2" alt="Imagen de perfil" style="width: 40px; height: 40px;">
+                        <h6><a href="detalle-publicacion3.html" class="text-white text-decoration-none">CreativeMind</a></h6>
+                    </div>
+                    <p><a href="detalle-publicacion.html" class="text-white text-decoration-none">¡Escultura de madera terminada! 🪵✨</a></p>
+                    <img src="img/7.jpeg" alt="Escultura" class="img-fluid mb-3" onclick="showImageInModal(this)">
+                    <div class="d-flex justify-content-between mt-3">
+                        <a href="#" class="btn btn-dark text-light me-2">
+                            <i class="fas fa-heart"></i> Me gusta <span class="like-count">410</span>
+                        </a>
+                        <a href="#" class="btn btn-dark text-light me-2">
+                            <i class="fas fa-retweet"></i> Compartir <span class="share-count">120</span>
+                        </a>
+                        <a href="#" class="btn btn-dark text-light me-2" onclick="mostrarConfirmacionGuardado()">
+                            <i class="fas fa-bookmark"></i> Guardar <span class="save-count">60</span>
+                        </a>
+                        <button class="btn btn-dark text-light me-2" onclick="toggleComments(this)">
+                            <i class="fas fa-comment"></i> Comentar <span class="comment-count">30</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="post-card mb-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="img/3.jpeg" class="rounded-circle me-2" alt="Imagen de perfil" style="width: 40px; height: 40px;">
+                        <h6><a href="detalle-publicacion.html" class="text-white text-decoration-none">DigitalArtPro</a></h6>
+                    </div>
+                    <p><a href="detalle-publicacion.html" class="text-white text-decoration-none">Concepto futurista de ciudad 🏙️💡</a></p>
+                    <img src="img/8.jpeg" alt="Ciudad futurista" class="img-fluid mb-3" onclick="showImageInModal(this)">
+                    <div class="d-flex justify-content-between mt-3">
+                        <a href="#" class="btn btn-dark text-light me-2">
+                            <i class="fas fa-heart"></i> Me gusta <span class="like-count">580</span>
+                        </a>
+                        <a href="#" class="btn btn-dark text-light me-2">
+                            <i class="fas fa-retweet"></i> Compartir <span class="share-count">210</span>
+                        </a>
+                        <a href="#" class="btn btn-dark text-light me-2" onclick="mostrarConfirmacionGuardado()">
+                            <i class="fas fa-bookmark"></i> Guardar <span class="save-count">100</span>
+                        </a>
+                        <button class="btn btn-dark text-light me-2" onclick="toggleComments(this)">
+                            <i class="fas fa-comment"></i> Comentar <span class="comment-count">75</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="post-card mb-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="img/4.jpeg" class="rounded-circle me-2" alt="Imagen de perfil" style="width: 40px; height: 40px;">
+                        <h6><a href="detalle-publicacion.html" class="text-white text-decoration-none">ArtisticSoul</a></h6>
+                    </div>
+                    <p><a href="detalle-publicacion.html" class="text-white text-decoration-none">Mural callejero en progreso 🎨🖌️</a></p>
+                    <img src="img/9.jpeg" alt="Mural en progreso" class="img-fluid mb-3" onclick="showImageInModal(this)">
+                    <div class="d-flex justify-content-between mt-3">
+                        <a href="#" class="btn btn-dark text-light me-2">
+                            <i class="fas fa-heart"></i> Me gusta <span class="like-count">480</span>
+                        </a>
+                        <a href="#" class="btn btn-dark text-light me-2">
+                            <i class="fas fa-retweet"></i> Compartir <span class="share-count">160</span>
+                        </a>
+                        <a href="#" class="btn btn-dark text-light me-2" onclick="mostrarConfirmacionGuardado()">
+                            <i class="fas fa-bookmark"></i> Guardar <span class="save-count">80</span>
+                        </a>
+                        <button class="btn btn-dark text-light me-2" onclick="toggleComments(this)">
+                            <i class="fas fa-comment"></i> Comentar <span class="comment-count">55</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="post-card mb-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="img/5.jpeg" class="rounded-circle me-2" alt="Imagen de perfil" style="width: 40px; height: 40px;">
+                        <h6><a href="detalle-publicacion.html" class="text-white text-decoration-none">PhotoArtist</a></h6>
+                    </div>
+                    <p><a href="detalle-publicacion.html" class="text-white text-decoration-none">Amanecer en las montañas 🌄📸</a></p>
+                    <img src="img/10.jpeg" alt="Amanecer" class="img-fluid mb-3" onclick="showImageInModal(this)">
+                    <div class="d-flex justify-content-between mt-3">
+                        <a href="#" class="btn btn-dark text-light me-2">
+                            <i class="fas fa-heart"></i> Me gusta <span class="like-count">610</span>
+                        </a>
+                        <a href="#" class="btn btn-dark text-light me-2">
+                            <i class="fas fa-retweet"></i> Compartir <span class="share-count">250</span>
+                        </a>
+                        <a href="#" class="btn btn-dark text-light me-2" onclick="mostrarConfirmacionGuardado()">
+                            <i class="fas fa-bookmark"></i> Guardar <span class="save-count">120</span>
+                        </a>
+                        <button class="btn btn-dark text-light me-2" onclick="toggleComments(this)">
+                            <i class="fas fa-comment"></i> Comentar <span class="comment-count">80</span>
+                        </button>
+                    </div>
+                </div>                                                                                               
             </main>
 
             <aside class="col-md-4 trends">
@@ -204,11 +315,10 @@
         <div class="container text-center">
             <hr class="footer-divider">
             <ul class="list-inline mb-2">
-                <li class="list-inline-item"><a href="condiciones.html" class="text-decoration-none">Condiciones de uso</a></li>
-                <li class="list-inline-item"><a href="politicas.html" class="text-decoration-none">Políticas de privacidad</a></li>
+                <li class="list-inline-item"><a href="privacidad.html" class="text-decoration-none">Condiciones de uso</a></li>
+                <li class="list-inline-item"><a href="terminos.html".html" class="text-decoration-none">Políticas de privacidad</a></li>
                 <li class="list-inline-item"><a href="contacto.html" class="text-decoration-none">Contacto</a></li>
-                <li class="list-inline-item"><a href="accesibilidad.html" class="text-decoration-none">Accesibilidad</a></li>
-                <li class="list-inline-item"><a href="ayuda.html" class="text-decoration-none">Ayuda</a></li>
+                <li class="list-inline-item"><a href="contacto.html" class="text-decoration-none">Ayuda</a></li>
             </ul>
             <p class="small">© 2024 ArtZone. Todos los derechos reservados.</p>
         </div>
